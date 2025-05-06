@@ -1,0 +1,254 @@
+/* 
+Native styles in CSS
+*/
+h1 {
+    font-family: "Albert Sans", sans-serif;
+    font-size: min(calc(24px + 3vw), 72px);
+    font-weight: 500; /* Use a value from 100 to 900*/
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Albert Sans", sans-serif;
+    font-size: min(calc(24px + 3vw), 42px);
+    font-weight: 500; /* Use a value from 100 to 900*/
+    font-style: normal;
+}
+
+h3 {
+  font-family: "Albert Sans", sans-serif;
+  font-size: min(calc(24px + 3vw), 32px);
+  font-weight: 500; /* Use a value from 100 to 900*/
+  font-style: normal;
+}
+
+p{
+    font-family: "Albert Sans", sans-serif;
+    font-size:24px;
+    max-width: 1200px;           /* Limits container width on larger screens */
+    margin: 0 auto;              /* Centers container on the page */
+    padding: 20px;
+}
+
+body {background-color: #FFFFFF;}
+
+img{
+    height: 50vw;
+    max-height:540px;
+    object-fit: cover;           /* Ensures the image scales well */
+}
+
+.albert-sans-normal { /*Font Styling*/
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300; /* Use a value from 100 to 900*/
+  font-style: normal;
+}
+
+
+/*
+Alignments
+*/
+.text-img-container { /*For general text and image alignment*/
+    display: flex;               /* Creates a flex container */
+    align-items: center;         /* Vertically centers the text and image */
+    justify-content: center;     /* Centers the content in the container */
+    gap: 20px;                   /* Consistent space between text and image */
+    padding: 20px;
+    max-width: 1200px;           /* Limits container width on larger screens */
+    margin: 0 auto;              /* Centers container on the page */
+}
+
+.img-button-container { /*For image and button alignment*/
+    display: flex;               /* Creates a flex container */
+    align-items: center;         /* Vertically centers the text and image */
+    flex-direction: column;
+    flex: 1;
+}
+.text-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.image-section img {
+  height: 50vh;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+/* Resume button */
+.resume-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Dropdown arrow */
+.dropdown-toggle {
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Hidden dropdown content */
+.dropdown-content {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+/* Show dropdown when parent has a class */
+.dropdown.show .dropdown-content {
+  opacity: 1;
+  transform: scaleY(1);
+  pointer-events: auto;
+}
+
+/* 
+Navigation Bar 
+*/
+.topnav {
+    background-color: #333;
+    font-family: "Albert Sans", sans-serif;
+    overflow: hidden;
+    align-items: center;         /* Vertically centers the text and image */
+    justify-content: center;     /* Centers the content in the container */
+    gap: 20px;                   /* Consistent space between text and image */
+    padding: 20px;
+    max-width: 1200px;           /* Limits container width on larger screens */
+    min-width: none;
+    margin: 0 auto;              /* Centers container on the page */
+    border-radius: 25px;
+  }
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #7e7d8d;
+  color: white;
+}
+
+
+/* 
+Button Container 
+*/
+.resume-btn { /* Resume button */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dropdown-toggle { /* Dropdown arrow */
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.dropdown-content { /* Hidden dropdown content */
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+
+/* 
+Project Container 
+*/
+.projects-container { /*Container for a list of projects*/
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /* Responsive grid layout */
+  gap: 40px; 
+  padding: 20px;
+  max-width: 1200px;        
+  margin: 0 auto;
+}
+
+.project-card {/*General card styles*/
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 360px;         
+  height: 480px;
+
+  /*Border*/
+  border: 2px solid #cccccc;  /* Border around each card */
+  border-radius: 10px;
+
+  /*Formatting link text*/
+  text-decoration: none;      /* Remove underline from link */
+  color: inherit;             /* Inherit text color */
+
+  /*Transition effects to project-card:hover*/
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+}
+
+.project-card:hover {
+  transform: scale(1.05);     /* Slightly enlarge on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.project-card img {
+  max-width: 100%;               /* Adjust width as needed */
+  max-height: 100%;
+}
